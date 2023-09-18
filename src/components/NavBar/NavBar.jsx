@@ -12,11 +12,13 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { useTheme } from '@mui/material';
 
 const pages = ['Home', 'About', 'Works', 'Services'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export const Header = () => {
+export const NavBar = () => {
+  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -36,7 +38,7 @@ export const Header = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#0E185F", boxShadow: 'none' }} >
+    <AppBar position="static" sx={{ backgroundColor: theme.palette.primary, boxShadow: 'none', overflowX: 'hidden' }} >
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ zIndex: 1 }}>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -89,7 +91,7 @@ export const Header = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography style={{color: theme.palette.primary.dark}} textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -118,7 +120,7 @@ export const Header = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: theme.palette.primary.darker, display: 'block', fontWeight: 'bold' }}
               >
                 {page}
               </Button>
