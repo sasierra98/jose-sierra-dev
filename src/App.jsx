@@ -1,5 +1,5 @@
 import './App.css';
-import { NavBar } from './components/Header/Header';
+import { NavBar } from './components/NavBar/NavBar';
 import { Box, ThemeProvider} from '@mui/material';
 import { theme } from './styles';
 import { MainHero } from './components/MainHero/MainHero';
