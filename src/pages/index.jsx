@@ -1,11 +1,11 @@
-import "./App.css";
-import { NavBar } from "./components/NavBar/NavBar";
 import { Box, ThemeProvider } from "@mui/material";
-import { theme } from "./styles";
-import { MainHero } from "./components/MainPage/MainHero/MainHero";
-import { Services } from "./components/MainPage/Services/Services";
 
-function App() {
+import { theme } from "../styles";
+import { NavBar } from "../components/NavBar/NavBar";
+import { MainHero } from "../components/MainPage/MainHero/MainHero";
+import { Services } from "../components/MainPage/Services/Services";
+
+export const MainPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box>
@@ -17,10 +17,8 @@ function App() {
         </header>
         <NavBar />
         <MainHero />
-        {/* <Services /> */}
+        <Services />
       </Box>
     </ThemeProvider>
   );
-}
-
-export default App;
+};
