@@ -52,7 +52,6 @@ export const MainHero = () => {
                 className="max-w-full break-words"
                 variant="h1"
                 fontWeight={"bold"}
-                fontSize={"60px"}
                 fontFamily={"Montserrat"}
               >
                 Hi, I’am Jose.

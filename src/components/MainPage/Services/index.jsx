@@ -81,7 +81,7 @@ export const Services = () => {
     // theme.palette.primary
     <Box
       component={"section"}
-      className={`h-screen mx-10`}
+      className={`h-full xs:mx-10 md:mx-20`}
       bgcolor={theme.palette.common.white}
     >
       <Typography className="py-20" component={'div'} variant="h2" fontSize={40} fontWeight={700} textAlign={'center'} >What service do I provide</Typography>
