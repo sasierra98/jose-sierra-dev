@@ -8,9 +8,9 @@ import './style.css';
 
 export const Carrousel = ({data, children}) => {
   return (
-    <Box className="flex flex-row w-full">
+    <Box className="flex flex-row w-full relative">
       <Swiper
-        className="flex justify-center items-center text-center"
+        className="flex text-center absolute"
         modules={[Navigation, Autoplay]}
         direction="horizontal"
         slidesPerView={6}
@@ -20,7 +20,7 @@ export const Carrousel = ({data, children}) => {
           delay: 1,
           disableOnInteraction: false,
         }}
-        speed={3000}
+        speed={7000}
       >
         {data.map((_v, i) => (
           <SwiperSlide>
