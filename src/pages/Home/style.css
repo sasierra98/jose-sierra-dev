@@ -1,0 +1,47 @@
+.circle {
+  background: lightblue;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+}
+
+.divider-line {
+  background: rgba(255, 255, 255, 0.23);
+  width: 286px;
+  height: 1px;
+}
+
+.divider-circle {
+  width: 70px;
+  height: 70px;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.23);
+  border-radius: 50%;
+}
+
+.circle-center {
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+}
+
+.arc {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-image:
+    linear-gradient(270deg, transparent 50%, #FFBE62 50%),
+    linear-gradient(180deg, #FFBE62 50%, transparent 50%);
+}
+
+@media (max-width: 425px) {
+  .arc {
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-image:
+      linear-gradient(270deg, transparent 50%, #FFBE62 50%),
+      linear-gradient(180deg, #FFBE62 50%, transparent 50%);
+  }
+}

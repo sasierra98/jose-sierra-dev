@@ -1,4 +1,10 @@
-import { Box, ThemeProvider } from "@mui/material";
+import { 
+  Box, 
+  ThemeProvider,
+  Grid,
+  Typography,
+  useMediaQuery
+} from "@mui/material";
 
 import { theme } from "../../styles";
 import { NavBar } from "../../components/NavBar/NavBar";
@@ -7,8 +13,16 @@ import { Services } from "../../components/MainPage/Services";
 import { Carrousel } from "../../components/Carrousel";
 import { homeInfo } from "./homeInfo";
 
+import Ellipse2 from '../../assets/card2/ellipse-2.svg'
+import "./style.css";
+import { useTheme } from "@emotion/react";
+import { WorkingExperience } from "../../components/MainPage/WorkingExperience";
+
 export const MainPage = () => {
+  // const theme = useTheme();
   const {carrouselInfo} = homeInfo();
+  // const matches = useMediaQuery();
+  
   return (
     <ThemeProvider theme={theme}>
       <Box>
@@ -20,8 +34,13 @@ export const MainPage = () => {
         </header>
         <NavBar />
         <MainHero />
+        
+        <Box className="my-20" component={"section"}>
+          <Carrousel data={carrouselInfo} />
+        </Box>
+        
         <Services />
-        <Carrousel data={carrouselInfo} />
+        <WorkingExperience />
       </Box>
     </ThemeProvider>
   );
