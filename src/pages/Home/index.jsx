@@ -13,7 +13,6 @@ import { Services } from "../../components/MainPage/Services";
 import { Carrousel } from "../../components/Carrousel";
 import { homeInfo } from "./homeInfo";
 
-import Ellipse2 from '../../assets/card2/ellipse-2.svg'
 import "./style.css";
 import { useTheme } from "@emotion/react";
 import { WorkingExperience } from "../../components/MainPage/WorkingExperience";
