@@ -14,7 +14,7 @@ export const WorkingExperience = () => {
         <Grid item xs={12} md={6}>
           <Box
           subtitle
-            className={`flex flex-col justify-center bg-[${theme.palette.custom.subtitle}] rounded-2xl xs:p-8 h-full`}
+            className={`flex flex-col justify-center bg-[#151E2C] rounded-2xl xs:p-8 h-full`}
           >
             <Box className="w-full flex justify-end">
               <Box className="circle"></Box>
